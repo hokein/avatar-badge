@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="default.css" rel="stylesheet" type="text/css">
+<script src="main.js"></script>
+</head>
+<body>
+
+<h1>+99头像</h1>
+
+<h2>支持PNG, JPEG格式
+    <h2>
+        <div>
+            <input type="number" id="numbers" value="1" maxlength="3">
+        </div>
+
+        <div>
+            <label class="button">
+                上传
+                <input type="file" id="imageLoader" name="imageLoader"/>
+            </label>
+            <button class="button" type="button" onclick="setNumber()">设置数字</button>
+            <button class="button" type="button" onclick="saveImage()">导出</button>
+        </div>
+
+        <div>
+            <canvas id="imageCanvas"></canvas>
+        </div>
+</body>
+
+</html>      
