@@ -1,3 +1,4 @@
+var LENGTH = 400;
 var img, ctx;
 
 window.onload = function() {
@@ -12,9 +13,7 @@ function handleImage(e) {
     reader.onload = function (event) {
         img = new Image();
         img.onload = function () {
-            canvas.width = img.width;
-            canvas.height = img.height;
-            ctx.drawImage(img, 0, 0);
+            ctx.drawImage(img, 0, 0, LENGTH, LENGTH);
         }
         img.src = event.target.result;
     }
@@ -41,9 +40,8 @@ function saveImage() {
 }
 
 function setNumber() {
-    var length = img.width;
-    var radius = length * 0.178;
-    var centerX = length - radius;
+    var radius = LENGTH * 0.178;
+    var centerX = LENGTH - radius;
     var centerY = radius;
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
